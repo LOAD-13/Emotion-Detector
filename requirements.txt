@@ -1,0 +1,38 @@
+# ============================================
+# DETECTOR DE EMOCIONES CON IA
+# Dependencias del proyecto completo
+# ============================================
+
+# --- Core AI & Computer Vision ---
+opencv-python==4.8.1.78
+deepface==0.0.79
+tensorflow==2.15.0
+tf-keras==2.15.0
+numpy==1.24.3
+
+# --- MongoDB ---
+pymongo==4.6.0
+dnspython==2.4.2  # Necesario para MongoDB Atlas connection string
+
+# --- Web Framework & API ---
+fastapi==0.104.1
+uvicorn[standard]==0.24.0  # ASGI server para FastAPI
+python-multipart==0.0.6  # Para manejar form data
+
+# --- WebSockets para streaming ---
+websockets==12.0
+python-socketio==5.10.0
+
+# --- Utilidades ---
+colorama==0.4.6  # Colores en terminal Windows
+python-dotenv==1.0.0  # Para variables de entorno
+pydantic==2.5.0  # Validación de datos (viene con FastAPI)
+
+# --- Visualización y análisis de datos ---
+pandas==2.1.3  # Para manipulación de datos
+plotly==5.18.0  # Gráficas interactivas alternativa
+
+# --- Opcional: Para desarrollo ---
+# pytest==7.4.3  # Testing
+# black==23.11.0  # Code formatter
+# flake8==6.1.0  # Linter

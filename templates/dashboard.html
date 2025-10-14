@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector Dashboard</title>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i data-lucide="brain-circuit"></i>
+                <h1>Emotion Detector</h1>
+            </div>
+            <div class="header-stats">
+                <div class="stat-badge">
+                    <i data-lucide="activity"></i>
+                    <span id="status">Conectando...</span>
+                </div>
+                <div class="stat-badge">
+                    <i data-lucide="database"></i>
+                    <span id="total-count">0</span> detecciones
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        <i data-lucide="video"></i>
+                        Cámara en Tiempo Real
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="video-container">
+                        <canvas id="videoCanvas"></canvas>
+                        <div class="video-overlay" id="videoOverlay">
+                            <div class="loading-spinner"></div>
+                            <p>Iniciando cámara...</p>
+                        </div>
+                    </div>
+                    <div class="current-emotion" id="currentEmotion">
+                        <div class="emotion-display">
+                            <span class="emotion-emoji" id="emotionEmoji">😐</span>
+                            <div class="emotion-info">
+                                <span class="emotion-name" id="emotionName">Esperando detección...</span>
+                                <div class="confidence-bar">
+                                    <div class="confidence-fill" id="confidenceFill" style="width: 0%"></div>
+                                </div>
+                                <span class="confidence-text" id="confidenceText">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="stats-grid">
+            <!-- Emoción Dominante -->
+            <div class="card stat-card">
+                <div class="card-header">
+                    <h3>
+                        <i data-lucide="trophy"></i>
+                        Emoción Dominante
+                    </h3>
+                </div>
+                <div class="card-body center">
+                    <div class="dominant-emotion">
+                        <span class="dominant-emoji" id="dominantEmoji">🤔</span>
+                        <h2 id="dominantName">Cargando...</h2>
+                        <p id="dominantCount">0 detecciones</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Hoy -->
+            <div class="card stat-card">
+                <div class="card-header">
+                    <h3>
+                        <i data-lucide="calendar"></i>
+                        Total Hoy
+                    </h3>
+                </div>
+                <div class="card-body center">
+                    <div class="stat-number">
+                        <h2 id="todayTotal">0</h2>
+                        <p>Detecciones</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confianza Promedio -->
+            <div class="card stat-card">
+                <div class="card-header">
+                    <h3>
+                        <i data-lucide="gauge"></i>
+                        Confianza Promedio
+                    </h3>
+                </div>
+                <div class="card-body center">
+                    <div class="stat-number">
+                        <h2 id="avgConfidence">0%</h2>
+                        <p>Precisión</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <!-- Distribución de Emociones -->
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h2>
+                        <i data-lucide="pie-chart"></i>
+                        Distribución de Emociones (24h)
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <canvas id="emotionPieChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h2>
+                        <i data-lucide="bar-chart-3"></i>
+                        Distribución por Hora
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <canvas id="hourlyChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Emotions -->
+        <section class="recent-section">
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        <i data-lucide="history"></i>
+                        Emociones Recientes
+                    </h2>
+                    <button class="btn-secondary" onclick="refreshRecent()">
+                        <i data-lucide="refresh-cw"></i>
+                        Actualizar
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="recent-list" id="recentList">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/dashboard.js"></script>
+    <script>
+        // Inicializar iconos Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>

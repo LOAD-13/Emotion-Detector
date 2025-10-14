@@ -1,93 +1,31 @@
 
 ============================================================
-Nueva sesión iniciada: 2025-10-09 09:44:37
+Nueva sesión iniciada: 2025-10-13 15:32:38
+Session ID: 20251013_153238
 ============================================================
-[2025-10-09 09:44:40] Neutral - Confianza: 65.7%
-[2025-10-09 09:45:02] Enojo - Confianza: 84.0%
-[2025-10-09 09:45:03] Neutral - Confianza: 51.7%
-[2025-10-09 09:45:03] Enojo - Confianza: 64.6%
-[2025-10-09 09:45:04] Neutral - Confianza: 66.6%
-[2025-10-09 09:45:04] Enojo - Confianza: 87.7%
-[2025-10-09 09:45:06] Tristeza - Confianza: 70.6%
-[2025-10-09 09:45:06] Neutral - Confianza: 66.6%
-[2025-10-09 09:45:07] Tristeza - Confianza: 80.1%
-[2025-10-09 09:45:07] Felicidad - Confianza: 97.9%
-[2025-10-09 09:45:09] Neutral - Confianza: 59.5%
-[2025-10-09 09:45:10] Enojo - Confianza: 91.4%
-[2025-10-09 09:45:11] Neutral - Confianza: 88.6%
-[2025-10-09 09:45:12] Enojo - Confianza: 56.8%
-[2025-10-09 09:45:12] Neutral - Confianza: 72.7%
-[2025-10-09 09:45:14] Felicidad - Confianza: 64.1%
-[2025-10-09 09:45:15] Enojo - Confianza: 75.3%
-[2025-10-09 09:45:15] Neutral - Confianza: 62.9%
-[2025-10-09 09:45:17] Enojo - Confianza: 51.8%
-[2025-10-09 09:45:17] Neutral - Confianza: 96.1%
-[2025-10-09 09:45:25] Felicidad - Confianza: 51.0%
-[2025-10-09 09:45:27] Neutral - Confianza: 63.9%
-[2025-10-09 09:45:30] Enojo - Confianza: 50.5%
-[2025-10-09 09:45:31] Neutral - Confianza: 71.9%
-[2025-10-09 09:45:33] Enojo - Confianza: 68.0%
-[2025-10-09 09:45:34] Neutral - Confianza: 73.9%
-[2025-10-09 09:45:34] Felicidad - Confianza: 96.6%
-[2025-10-09 09:45:36] Enojo - Confianza: 62.8%
-[2025-10-09 09:45:37] Neutral - Confianza: 70.1%
-[2025-10-09 09:45:37] Enojo - Confianza: 72.6%
-[2025-10-09 09:45:38] Felicidad - Confianza: 64.7%
-[2025-10-09 09:45:39] Neutral - Confianza: 90.7%
-[2025-10-09 09:45:39] Miedo - Confianza: 59.8%
-[2025-10-09 09:45:43] Neutral - Confianza: 82.7%
-[2025-10-09 09:45:44] Enojo - Confianza: 65.3%
-[2025-10-09 09:45:44] Neutral - Confianza: 97.4%
-[2025-10-09 09:45:45] Enojo - Confianza: 61.0%
-[2025-10-09 09:45:45] Neutral - Confianza: 55.4%
-[2025-10-09 09:45:46] Enojo - Confianza: 93.6%
-[2025-10-09 09:45:48] Neutral - Confianza: 99.4%
-[2025-10-09 09:45:49] Enojo - Confianza: 95.1%
-[2025-10-09 09:45:50] Neutral - Confianza: 56.8%
-[2025-10-09 09:45:51] Enojo - Confianza: 98.1%
-[2025-10-09 09:46:10] Neutral - Confianza: 92.0%
-[2025-10-09 09:46:16] Tristeza - Confianza: 55.1%
-[2025-10-09 09:46:17] Sorpresa - Confianza: 59.5%
-[2025-10-09 09:46:18] Neutral - Confianza: 52.8%
-[2025-10-09 09:46:22] Sorpresa - Confianza: 82.1%
-[2025-10-09 09:46:24] Tristeza - Confianza: 52.0%
-[2025-10-09 09:46:31] Neutral - Confianza: 98.2%
-[2025-10-09 09:46:32] Enojo - Confianza: 70.0%
-[2025-10-09 09:46:33] Neutral - Confianza: 87.0%
-[2025-10-09 09:46:33] Enojo - Confianza: 63.5%
-[2025-10-09 09:46:38] Neutral - Confianza: 76.1%
-[2025-10-09 09:46:38] Miedo - Confianza: 54.3%
-[2025-10-09 09:46:39] Neutral - Confianza: 81.4%
-[2025-10-09 09:46:42] Enojo - Confianza: 84.3%
-[2025-10-09 09:46:55] Neutral - Confianza: 69.2%
-[2025-10-09 09:46:55] Enojo - Confianza: 74.0%
-[2025-10-09 09:46:58] Neutral - Confianza: 97.7%
-[2025-10-09 09:47:01] Tristeza - Confianza: 57.4%
-[2025-10-09 09:47:01] Neutral - Confianza: 93.6%
-[2025-10-09 09:47:09] Enojo - Confianza: 82.9%
-[2025-10-09 09:47:09] Neutral - Confianza: 61.5%
-[2025-10-09 09:47:10] Enojo - Confianza: 80.1%
-[2025-10-09 09:47:12] Neutral - Confianza: 77.5%
-[2025-10-09 09:47:14] Sorpresa - Confianza: 90.9%
-[2025-10-09 09:47:14] Enojo - Confianza: 85.5%
-[2025-10-09 09:47:15] Neutral - Confianza: 54.7%
-[2025-10-09 09:47:16] Miedo - Confianza: 51.9%
-[2025-10-09 09:47:18] Tristeza - Confianza: 70.4%
-[2025-10-09 09:47:26] Felicidad - Confianza: 99.9%
-[2025-10-09 09:47:27] Neutral - Confianza: 86.4%
-[2025-10-09 09:47:29] Enojo - Confianza: 88.5%
-[2025-10-09 09:47:35] Tristeza - Confianza: 50.2%
-[2025-10-09 09:47:46] Neutral - Confianza: 98.1%
-Sesión finalizada: 2025-10-09 09:48:12
-============================================================
-
-
-============================================================
-Nueva sesión iniciada: 2025-10-09 09:56:09
-============================================================
-[2025-10-09 09:56:13] Neutral - Confianza: 99.4%
-[2025-10-09 09:56:22] Sorpresa - Confianza: 75.5%
-[2025-10-09 09:56:22] Neutral - Confianza: 78.2%
-Sesión finalizada: 2025-10-09 09:56:36
+[2025-10-13 15:32:43] Neutral - Confianza: 84.7%
+[2025-10-13 15:32:44] Enojo - Confianza: 64.9%
+[2025-10-13 15:32:45] Neutral - Confianza: 70.2%
+[2025-10-13 15:32:46] Enojo - Confianza: 72.6%
+[2025-10-13 15:32:47] Neutral - Confianza: 50.7%
+[2025-10-13 15:32:57] Miedo - Confianza: 58.8%
+[2025-10-13 15:32:58] Neutral - Confianza: 94.0%
+[2025-10-13 15:32:58] Felicidad - Confianza: 59.0%
+[2025-10-13 15:32:59] Neutral - Confianza: 77.4%
+[2025-10-13 15:33:02] Felicidad - Confianza: 60.4%
+[2025-10-13 15:33:03] Neutral - Confianza: 98.7%
+[2025-10-13 15:33:03] Miedo - Confianza: 72.4%
+[2025-10-13 15:33:04] Neutral - Confianza: 70.6%
+[2025-10-13 15:33:17] Tristeza - Confianza: 57.6%
+[2025-10-13 15:33:17] Miedo - Confianza: 61.9%
+[2025-10-13 15:33:19] Neutral - Confianza: 53.4%
+[2025-10-13 15:33:20] Miedo - Confianza: 56.2%
+[2025-10-13 15:33:21] Neutral - Confianza: 84.5%
+[2025-10-13 15:33:22] Felicidad - Confianza: 87.6%
+[2025-10-13 15:33:22] Miedo - Confianza: 68.5%
+[2025-10-13 15:33:24] Tristeza - Confianza: 76.4%
+[2025-10-13 15:33:26] Neutral - Confianza: 96.0%
+Sesión finalizada: 2025-10-13 15:33:27
+Total detecciones en sesión: 22
 ============================================================
 
