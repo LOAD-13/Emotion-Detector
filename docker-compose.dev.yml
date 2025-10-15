@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  emotion-detector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: emotion-detector-dev
+    restart: unless-stopped
+    
+    ports:
+      - "8000:8000"
+    
+    devices:
+      - /dev/video0:/dev/video0
+    
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - MONGODB_DATABASE=${MONGODB_DATABASE:-Emotions}
+      - MONGODB_COLLECTION=${MONGODB_COLLECTION:-emotions_log}
+      - CAMERA_INDEX=${CAMERA_INDEX:-0}
+      - CONFIDENCE_THRESHOLD=${CONFIDENCE_THRESHOLD:-0.5}
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - TF_ENABLE_ONEDNN_OPTS=0
+    
+    # Hot reload en desarrollo
+    volumes:
+      - ./detector:/app/detector
+      - ./api:/app/api
+      - ./static:/app/static
+      - ./templates:/app/templates
+      - ./logs:/app/logs
+      - emotion-models-dev:/root/.deepface
+    
+    # Comando con reload automático
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+    
+    networks:
+      - emotion-network-dev
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "2"
+
+volumes:
+  emotion-models-dev:
+    driver: local
+
+networks:
+  emotion-network-dev:
+    driver: bridge

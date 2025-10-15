@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # ==================== EMOTION DETECTOR APP ====================
+  emotion-detector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: emotion-detector-app
+    restart: unless-stopped
+    
+    ports:
+      - "8000:8000"
+    
+    # Acceso a la cámara web
+    devices:
+      - /dev/video0:/dev/video0  # Cámara USB/integrada
+    
+    # Variables de entorno
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - MONGODB_DATABASE=${MONGODB_DATABASE:-Emotions}
+      - MONGODB_COLLECTION=${MONGODB_COLLECTION:-emotions_log}
+      - CAMERA_INDEX=${CAMERA_INDEX:-0}
+      - CONFIDENCE_THRESHOLD=${CONFIDENCE_THRESHOLD:-0.5}
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - TF_ENABLE_ONEDNN_OPTS=0  # Silenciar warnings de TensorFlow
+    
+    # Volúmenes para persistencia
+    volumes:
+      - ./logs:/app/logs  # Logs persistentes
+      - emotion-models:/root/.deepface  # Cache de modelos DeepFace
+    
+    # Privilegios para acceso a cámara
+    privileged: false
+    
+    # Límites de recursos (ajustar según tu hardware)
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '1.0'
+          memory: 1G
+    
+    # Red personalizada
+    networks:
+      - emotion-network
+    
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# ==================== VOLUMES ====================
+volumes:
+  emotion-models:
+    driver: local
+    name: emotion-detector-models
+
+# ==================== NETWORKS ====================
+networks:
+  emotion-network:
+    driver: bridge
+    name: emotion-detector-network
