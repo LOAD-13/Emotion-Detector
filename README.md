@@ -520,7 +520,7 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
 **Joaquín Loa Denegri**
 
-- GitHub: [@jloadenegri](https://github.com/jloadenegri)
+- GitHub: [@jloadenegri](https://github.com/LOAD-13)
 
 ---
 
