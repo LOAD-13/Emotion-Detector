@@ -18,6 +18,7 @@ import cv2
 import numpy as np
 from typing import List
 
+
 # Agregar path para imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -252,6 +253,20 @@ async def websocket_video_endpoint(websocket: WebSocket):
                             }
                             
                             db.insert_emotion(emotion_es, confidence, metadata)
+                             # 🔔 Enviar alerta a n8n si es emoción negativa
+                            if emotion_es in ['Enojo', 'Tristeza', 'Miedo']:
+                                try:
+                                    import requests
+                                    webhook_url = "http://192.168.100.100:5678/webhook/emotion-alert"
+                                    payload = {
+                                        "emotion": emotion_es,
+                                        "confidence": confidence * 100,
+                                        "timestamp": datetime.now().isoformat()
+                                    }
+                                    
+                                    requests.post(webhook_url, json=payload, timeout=2)
+                                except Exception as e:
+                                    print(f"⚠️ Error enviando webhook: {e}")
                             
                             emotion_data = {
                                 'emotion': emotion_es,
